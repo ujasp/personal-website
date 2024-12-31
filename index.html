@@ -2,52 +2,58 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>Ujas - GenAI Explorer</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ujas Patel - GenAI Explorer</title>
 
   <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.gstatic.com" />
   <link
-    href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap"
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap"
     rel="stylesheet"
   />
 
-  <!-- AOS (Animate On Scroll) Styles -->
-  <link
-    rel="stylesheet"
-    href="https://unpkg.com/aos@2.3.1/dist/aos.css"
-  />
-
-  <!-- Link to your CSS file -->
+  <!-- Link to CSS -->
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
+  <!-- Animated Gradient Background -->
+  <div class="animated-bg"></div>
+
   <!-- Header Section -->
-  <header data-aos="fade-down">
-    <h1>Hi, I'm Ujas</h1>
-    <p class="subheading">I build creative solutions using GenAI</p>
+  <header>
+    <div class="profile-section">
+      <img src="profile_photo.jpg" alt="Ujas Patel" class="profile-pic" />
+      <h1>Ujas Patel</h1>
+      <p class="subheading">Strategy | Technology | People</p>
+    </div>
   </header>
 
-  <!-- Main Content / CTA Buttons -->
-  <main data-aos="fade-up">
-    <a href="#portfolio" class="btn">See My Work</a>
-    <a href="#contact" class="btn">Contact Me</a>
+  <!-- Bio Section -->
+  <main>
+    <section class="bio">
+      <h2>About Me</h2>
+      <p>
+        I'm an experienced programmer and business intelligence analyst with
+        a passion for leveraging <strong>Generative AI</strong> and emerging
+        technologies to create innovative solutions. My work spans healthcare,
+        e-commerce, and sustainability-focused projects, always striving to
+        make a meaningful impact.
+      </p>
+    </section>
+
+    <!-- CTA Button -->
+    <section class="cta-buttons">
+      <a href="https://www.linkedin.com/in/ujas-patel" target="_blank" class="btn">
+        Connect with Me on LinkedIn
+      </a>
+    </section>
   </main>
 
   <!-- Footer -->
-  <footer data-aos="fade-in">
-    <p>© 2024 Ujas. All rights reserved.</p>
-    <p>
-      Connect with me on
-      <a href="https://linkedin.com" target="_blank">LinkedIn</a> |
-      <a href="https://twitter.com" target="_blank">Twitter</a>
-    </p>
+  <footer>
+    <p>© 2024 Ujas Patel — All Rights Reserved.</p>
   </footer>
+  <script src="script.js"></script>
 
-  <!-- AOS Script -->
-  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-  <script>
-    // Initialize AOS animations
-    AOS.init();
-  </script>
 </body>
 </html>
