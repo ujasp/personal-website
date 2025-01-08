@@ -24,6 +24,7 @@ const HeroSection = () => {
                 {/* Right Side - Title, Taglines, Button */}
                 <div className="hero-content">
                     <h1>Ujas Patel</h1>
+                    <p className="hero-degree">MBA, BSc (Software)</p>
                     <p className="hero-tagline">Strategy Consultant</p>
                     <p className="hero-tagline">Data Analyst</p>
                     <p className="hero-tagline">Relationship Builder</p>
