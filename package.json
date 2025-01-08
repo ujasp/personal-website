@@ -19,7 +19,7 @@
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build"
   },
-  "homepage": "https://ujaspatel.github.io/personal-website",
+  "homepage": "https://ujaspatel.com/",
   "eslintConfig": {
     "extends": [
       "react-app",
