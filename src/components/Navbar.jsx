@@ -19,7 +19,6 @@ const Navbar = () => {
                         className="linkedin-link"
                     >
                         <FaLinkedin className="navbar-icon" />
-                        Connect
                     </a>
                 </div>
             </div>
