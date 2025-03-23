@@ -56,7 +56,10 @@ const Skills = () => {
             transition={{ duration: 1 }}
             id="skills"
         >
-            <h2>Skills I've Leveraged to Make This Impact</h2>
+            <div className="section-header">
+                <h2>Skills I've Leveraged to Make This Impact</h2>
+                <p>A comprehensive toolkit that drives success across projects and teams</p>
+            </div>
             <div className="skills-grid">
                 {skillsData.map((category, index) => (
                     <div className="skills-category" key={index}>

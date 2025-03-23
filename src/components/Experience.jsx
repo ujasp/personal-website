@@ -9,7 +9,7 @@ const Experience = () => {
             company: 'Rezdy',
             logo: `${process.env.PUBLIC_URL}/logos/rezdy-logo.jpeg`,
             role: 'Business Intelligence Analyst',
-            description: 'Automated business reporting tool for clients cutting down report generation time tby 80% and improving insights for clients.'
+            description: 'Automated business reporting tool for clients cutting down report generation time by 80% and improving insights for clients.'
         },
         {
             company: 'ResMed',
@@ -20,7 +20,7 @@ const Experience = () => {
         {
             company: 'Innovior',
             logo: `${process.env.PUBLIC_URL}/logos/innovior-logo.jpeg`,
-            role: 'Strategic Consulting Project - MBA Internship',
+            role: 'MBA Internship - Strategic Consulting Project',
             description: 'Led a strategic consulting project identifying Gen AI technologies in customer service, creating a plan with the potential to save $102 million over four years and reduce customer handling times by 20-40% through process improvements.'
         },
         {
@@ -39,7 +39,10 @@ const Experience = () => {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 1 }}
         >
-            <h2>Where I've Made an Impact</h2>
+            <div className="section-header">
+                <h2>Where I've Made an Impact</h2>
+                <p>A journey through my professional experiences and achievements</p>
+            </div>
 
             {/* Experience List with Logos */}
             {experiences.map((item, index) => (

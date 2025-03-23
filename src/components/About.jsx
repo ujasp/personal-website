@@ -11,8 +11,7 @@ const About = () => {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 1 }}
         >
-            {/* Section Heading */}
-            <h2>A little bit about me</h2>
+            <h2>A Little Bit About Me</h2>
 
             {/* Personal Summary */}
             <p>
