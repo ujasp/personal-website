@@ -2,6 +2,7 @@ import React, { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { FiArrowRight } from 'react-icons/fi';
 import Navbar from '../components/Navbar';
+import { AdBanner } from '../components/ads';
 import './Articles.css';
 
 const Articles = () => {
@@ -61,6 +62,15 @@ const Articles = () => {
                     <h1>Articles</h1>
                     <p>Exploring the intersection of AI, technology, and business innovation</p>
                 </div>
+                
+                {/* Top of articles page ad */}
+                <AdBanner 
+                    type="horizontal" 
+                    size="large" 
+                    adSlot="4567890123"
+                    className="articles-page-top-ad"
+                />
+                
                 <div className="articles-grid">
                     {articles.map((article) => (
                         <Link to={`/blog/${article.guid}`} key={article.guid} className="article-card">

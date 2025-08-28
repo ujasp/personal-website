@@ -8,8 +8,10 @@ import Skills from './components/Skills';
 import Articles from './components/Blog';
 import BlogPost from './components/BlogPost';
 import ArticlesPage from './pages/Articles';
+import PrivacyPolicy from './pages/PrivacyPolicy';
 import Footer from './components/Footer';
 import SectionNavigator from './components/SectionNavigator';
+import CookieConsent from './components/CookieConsent';
 import './App.css';
 
 const HomePage = () => (
@@ -31,8 +33,10 @@ const App = () => {
             <Routes>
                 <Route path="/blog/:id" element={<BlogPost />} />
                 <Route path="/blog" element={<ArticlesPage />} />
+                <Route path="/privacy-policy" element={<PrivacyPolicy />} />
                 <Route path="/" element={<HomePage />} />
             </Routes>
+            <CookieConsent />
         </Router>
     );
 };

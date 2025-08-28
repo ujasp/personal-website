@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { useParams, useNavigate, Link } from 'react-router-dom';
 import { FaLinkedin } from 'react-icons/fa';
 import Navbar from './Navbar';
+import { AdBanner, InContentAd, AffiliateLink } from './ads';
 import './BlogPost.css';
 
 const ARTICLES_DATA = {
@@ -612,6 +613,14 @@ const BlogPost = () => {
                             {post.description}
                         </div>
                         
+                        {/* Top Article Ad - High visibility */}
+                        <AdBanner 
+                            type="horizontal" 
+                            size="large" 
+                            adSlot="1234567890"
+                            className="article-top-ad"
+                        />
+                        
                         <div className="post-body">
                             <LayoutComponent 
                                 post={post}
@@ -620,10 +629,53 @@ const BlogPost = () => {
                                 renderListItems={renderListItems}
                             />
                             
+                            {/* Mid-content Ad - Good engagement */}
+                            <InContentAd 
+                                adSlot="2345678901"
+                                className="mid-content-ad"
+                            />
+                            
                             <div className="content-section">
                                 <h2>Expert Analysis</h2>
                                 <p>{post.content}</p>
                             </div>
+                            
+                            {/* Affiliate recommendations based on article topic */}
+                            {post.guid === 'ai-copilots-2025' && (
+                                <AffiliateLink
+                                    href="https://github.com/features/copilot"
+                                    product="GitHub Copilot"
+                                    price="$10/month"
+                                    description="AI-powered code completion and suggestions directly in your IDE. Perfect for developers looking to boost productivity."
+                                    buttonText="Try GitHub Copilot"
+                                    imageUrl="https://github.githubassets.com/images/modules/site/copilot/copilot-logo.png"
+                                    className="recommended-tool"
+                                />
+                            )}
+                            
+                            {post.guid === 'ai-product-strategy-2025' && (
+                                <AffiliateLink
+                                    href="https://www.notion.so/product"
+                                    product="Notion AI"
+                                    price="$10/month"
+                                    description="AI-powered workspace that helps product managers organize strategies, write documentation, and analyze data."
+                                    buttonText="Try Notion AI"
+                                    imageUrl="https://www.notion.so/cdn-cgi/image/format=webp,width=640/https://images.ctfassets.net/spoqsaf9291f/6Lh8lMHOi5Ow7WOVJrxdNZ/4e5e6b7f8d1f2a3b4c5d6e7f8g9h0i1j/notion-ai-logo.png"
+                                    className="recommended-tool"
+                                />
+                            )}
+                            
+                            {post.guid === 'ai-project-management-2025' && (
+                                <AffiliateLink
+                                    href="https://monday.com/ai"
+                                    product="Monday.com AI"
+                                    price="From $8/month"
+                                    description="AI-powered project management platform that automates task creation, scheduling, and team collaboration."
+                                    buttonText="Try Monday.com AI"
+                                    imageUrl="https://dapulse-res.cloudinary.com/image/upload/f_auto,q_auto/remote_mondaycom_static/img/monday-logo-x2.png"
+                                    className="recommended-tool"
+                                />
+                            )}
                             
                             <div className="post-footer">
                                 <div className="author-section">
@@ -652,6 +704,14 @@ const BlogPost = () => {
                                     </button>
                                 </div>
                             </div>
+                            
+                            {/* Bottom Ad - High conversion area */}
+                            <AdBanner 
+                                type="horizontal" 
+                                size="large" 
+                                adSlot="3456789012"
+                                className="article-bottom-ad"
+                            />
                         </div>
                     </div>
                 </div>
