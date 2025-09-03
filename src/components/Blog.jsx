@@ -15,9 +15,33 @@ const Articles = () => {
     // Custom articles data - only featured ones
     const customArticles = [
         {
+            title: "Chinese startup Manus challenges ChatGPT in data visualization: Which should enterprises use?",
+            description: "A deep dive into how Chinese startup Manus is taking on OpenAI's ChatGPT in the data visualization space, examining the competitive landscape and what enterprises should consider when choosing between these AI-powered solutions.",
+            pubDate: "2025-07-22T10:00:00",
+            link: "https://venturebeat.com/data-infrastructure/chinese-startup-manus-challenges-chatgpt-in-data-visualization-which-should-enterprises-use",
+            thumbnail: "https://venturebeat.com/_next/image?url=https%3A%2F%2Fimages.ctfassets.net%2Fjdtwqhzvc2n1%2F1REcmhUTtHLaLaG4IbvO7X%2F94e9a7ea90e730ec62a80b6eec799d31%2FGemini_Generated_Image_nago9hnago9hnago.jpeg&w=1920&q=75",
+            source: "VentureBeat",
+            category: "Data Infrastructure",
+            guid: "venturebeat-manus-chatgpt-2025",
+            readTime: "6 min read",
+            featured: true
+        },
+        {
+            title: "$42.1 million poured into startup offering energy-efficient solutions for costly and unwieldy operational data and AI workloads",
+            description: "Exploring how a well-funded startup is tackling the growing challenge of energy-efficient data processing and AI workload management, addressing both cost and environmental concerns in enterprise operations.",
+            pubDate: "2025-04-23T14:30:00",
+            link: "https://venturebeat.com/data-infrastructure/42-1-million-poured-into-startup-offering-energy-efficient-solutions-for-costly-and-unwieldy-operational-data-and-ai-workloads",
+            thumbnail: "https://venturebeat.com/_next/image?url=https%3A%2F%2Fimages.ctfassets.net%2Fjdtwqhzvc2n1%2Fcs8zeieEKuKiuVc74v5DM%2Fa6b32e1e4652d6deb575d226a6a17061%2FGettyImages-1301445128.jpg&w=1920&q=75",
+            source: "VentureBeat",
+            category: "Data Infrastructure",
+            guid: "venturebeat-energy-efficient-2025",
+            readTime: "7 min read",
+            featured: true
+        },
+        {
             title: "Pig API: Give your AI agents a virtual desktop to automate Windows apps",
             description: "In the evolving landscape of AI, enterprises face the challenge of integrating modern solutions with legacy systems that often lack the necessary application programming interfaces (APIs) for seamless integration.",
-            pubDate: "2025-01-29T16:34:00",
+            pubDate: "2025-01-30T09:15:00",
             link: "https://venturebeat.com/ai/pig-api-give-your-ai-agents-a-virtual-desktop-to-automate-windows-apps/",
             thumbnail: "https://venturebeat.com/wp-content/uploads/2025/01/a-vector-illustration-of-a-sophisticated_dE40ZnYlTlqEs85jX3HojA_RfAN0as0StqbwUix2n7DgA-transformed.jpeg?w=750",
             source: "VentureBeat",
