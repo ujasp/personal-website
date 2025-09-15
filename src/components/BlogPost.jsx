@@ -131,15 +131,7 @@ const ARTICLES_DATA = {
                     }
                 ]
             },
-            {
-                title: "Cost-Benefit Analysis",
-                metrics: [
-                    { label: "Development Speed", value: "+40%" },
-                    { label: "Code Quality", value: "+60%" },
-                    { label: "Cost Savings", value: "35%" },
-                    { label: "Team Efficiency", value: "45%" }
-                ]
-            }
+    
         ],
         content: "AI copilots are revolutionizing software development by providing intelligent assistance that goes far beyond simple code completion. These tools understand context, suggest optimizations, and help developers learn best practices in real-time. For business leaders, this translates into significant improvements in development efficiency and code quality.\n\nThe impact on business operations is substantial. Teams using AI copilots report up to 40% reduction in development time, while simultaneously improving code quality by 60%. This efficiency gain directly affects the bottom line, allowing companies to bring products to market faster and with fewer defects.\n\nFor CTOs and technical managers, the decision to implement AI copilots is increasingly becoming a strategic necessity rather than a luxury. The competitive advantage gained through improved developer productivity and code quality can be the difference between market leadership and falling behind."
     },
@@ -277,15 +269,6 @@ const ARTICLES_DATA = {
                     { title: "Query Orchestration", description: "Route NL queries to SQL/OLAP engines with caching" },
                     { title: "LLM Reasoning", description: "Translate intent → structured query → narrative summary" },
                     { title: "Safety & Guardrails", description: "Row/column security, PII masking, prompt safety, rate limits" }
-                ]
-            },
-            {
-                title: "Success Metrics",
-                metrics: [
-                    { label: "Analysis Speed", value: "+65%" },
-                    { label: "Insight Accuracy", value: "75%" },
-                    { label: "User Adoption", value: "80%" },
-                    { label: "Cost Savings", value: "40%" }
                 ]
             },
             {
