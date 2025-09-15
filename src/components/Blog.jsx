@@ -55,7 +55,7 @@ const Articles = () => {
             pubDate: "2025-02-15T10:00:00",
             link: "#",
             thumbnail: "https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1000",
-            source: "Coming Soon",
+            source: "Internal",
             category: "Product Strategy",
             guid: "ai-product-strategy-2025",
             featured: true
@@ -66,7 +66,7 @@ const Articles = () => {
             pubDate: "2025-02-10T09:00:00",
             link: "#",
             thumbnail: "https://images.unsplash.com/photo-1555949963-aa79dcee981c?q=80&w=1000",
-            source: "Coming Soon",
+            source: "Internal",
             category: "Development",
             guid: "ai-copilots-2025",
             featured: true
@@ -77,7 +77,7 @@ const Articles = () => {
             pubDate: "2025-02-05T11:00:00",
             link: "#",
             thumbnail: "https://images.unsplash.com/photo-1552664730-d307ca884978?q=80&w=1000",
-            source: "Coming Soon",
+            source: "Internal",
             category: "Project Management",
             guid: "ai-project-management-2025",
             featured: true
