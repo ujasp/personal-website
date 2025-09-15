@@ -623,8 +623,8 @@ const BlogPost = () => {
                             {post.description}
                         </div>
                         
-                        {/* Show ads only on fully published articles (not Coming Soon) */}
-                        {post.source !== 'Coming Soon' && (
+                        {/* Show ads only on fully published articles */}
+                        {post && (
                             <AdBanner 
                                 type="horizontal" 
                                 size="large" 
@@ -642,7 +642,7 @@ const BlogPost = () => {
                             />
                             
                             {/* Mid-content Ad - only for published articles */}
-                            {post.source !== 'Coming Soon' && (
+                            {post && (
                                 <InContentAd 
                                     adSlot="2345678901"
                                     className="mid-content-ad"
@@ -685,7 +685,7 @@ const BlogPost = () => {
                             </div>
                             
                             {/* Bottom Ad - only for published articles */}
-                            {post.source !== 'Coming Soon' && (
+                            {post && (
                                 <AdBanner 
                                     type="horizontal" 
                                     size="large" 
