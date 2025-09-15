@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { useParams, useNavigate, Link } from 'react-router-dom';
 import { FaLinkedin } from 'react-icons/fa';
 import Navbar from './Navbar';
-import { AdBanner, InContentAd, AffiliateLink } from './ads';
+import { AdBanner, InContentAd } from './ads';
 import './BlogPost.css';
 
 const ARTICLES_DATA = {
@@ -241,6 +241,15 @@ const ARTICLES_DATA = {
                 ]
             },
             {
+                title: "High-Value Use Cases",
+                listItems: [
+                    "KPI Q&A: executives ask plain-English questions over metrics",
+                    "Root-cause analysis: drill-down paths generated automatically",
+                    "Anomaly explanation: summarize outliers and likely drivers",
+                    "Meeting-ready narratives: auto-generate weekly performance briefs"
+                ]
+            },
+            {
                 title: "Implementation Guide",
                 steps: [
                     {
@@ -262,6 +271,15 @@ const ARTICLES_DATA = {
                 ]
             },
             {
+                title: "Architecture Overview",
+                steps: [
+                    { title: "Semantic Layer", description: "Define metrics, entities, and joins in a governed layer" },
+                    { title: "Query Orchestration", description: "Route NL queries to SQL/OLAP engines with caching" },
+                    { title: "LLM Reasoning", description: "Translate intent → structured query → narrative summary" },
+                    { title: "Safety & Guardrails", description: "Row/column security, PII masking, prompt safety, rate limits" }
+                ]
+            },
+            {
                 title: "Success Metrics",
                 metrics: [
                     { label: "Analysis Speed", value: "+65%" },
@@ -269,9 +287,18 @@ const ARTICLES_DATA = {
                     { label: "User Adoption", value: "80%" },
                     { label: "Cost Savings", value: "40%" }
                 ]
+            },
+            {
+                title: "Risks & Mitigations",
+                listItems: [
+                    "Hallucinations → require source citations and drill-to-data",
+                    "Security gaps → enforce RBAC at the warehouse and app layers",
+                    "Data drift → monitor model prompts and outcomes over time",
+                    "Change management → phased rollout with targeted enablement"
+                ]
             }
         ],
-        content: "Natural Language Processing is democratizing access to business intelligence by allowing users to interact with data using conversational language. This transformation is particularly impactful for business leaders who need quick access to insights without relying on technical teams.\n\nThe technology enables users to ask complex questions in plain English and receive detailed, accurate answers. This capability is transforming how organizations approach data analysis and decision-making. Business users can now explore data, generate reports, and uncover insights without writing a single line of code.\n\nFor decision-makers, this means faster access to critical business insights and more informed decision-making. The reduction in dependency on technical teams also leads to significant cost savings and improved operational efficiency."
+        content: "Natural Language Processing is democratizing access to business intelligence by allowing users to interact with data using conversational language. This is most impactful when paired with a governed semantic layer that ensures metric consistency across the organization.\n\nModern NL-to-BI systems translate questions to structured queries, retrieve results from the warehouse, and produce concise narratives that cite the underlying tables and metrics. The combination of transparency (links to data) and speed (seconds to answers) drives adoption beyond analyst teams.\n\nLeaders should pilot with a constrained set of high-value domains (e.g., revenue, pipeline, support) and measure success by time-to-answer, narrative accuracy, and downstream actionability. With the right guardrails, NL BI can shift entire organizations from static dashboards to truly conversational decision-making."
     },
     'ai-customer-service-2025': {
         insights: [
@@ -486,7 +513,7 @@ const BlogPost = () => {
                         description: "Artificial Intelligence is transforming the landscape of product management and strategy consulting. From predictive analytics for product-market fit to AI-powered decision support systems, discover how modern tools are enabling data-driven product strategies and revolutionizing traditional consulting approaches.",
                         pubDate: "2025-02-15T10:00:00",
                         thumbnail: "https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1000",
-                        source: "Coming Soon",
+                        source: "Ujas Patel",
                         guid: "ai-product-strategy-2025",
                         readTime: "8 min read",
                         category: "Product Strategy"
@@ -496,7 +523,7 @@ const BlogPost = () => {
                         description: "Explore how AI-powered coding assistants are revolutionizing software development. From code completion to natural language programming, learn how these tools are boosting developer productivity and changing the way we write code.",
                         pubDate: "2025-02-10T09:00:00",
                         thumbnail: "https://images.unsplash.com/photo-1555949963-aa79dcee981c?q=80&w=1000",
-                        source: "Coming Soon",
+                        source: "Ujas Patel",
                         guid: "ai-copilots-2025",
                         readTime: "6 min read",
                         category: "Development"
@@ -506,7 +533,7 @@ const BlogPost = () => {
                         description: "Discover how artificial intelligence is transforming project management tools, from automated task prioritization to intelligent resource allocation and predictive analytics for project success.",
                         pubDate: "2025-02-05T11:00:00",
                         thumbnail: "https://images.unsplash.com/photo-1552664730-d307ca884978?q=80&w=1000",
-                        source: "Coming Soon",
+                        source: "Ujas Patel",
                         guid: "ai-project-management-2025",
                         readTime: "7 min read",
                         category: "Project Management"
@@ -516,7 +543,7 @@ const BlogPost = () => {
                         description: "How conversational AI and NLP are making data analytics accessible to everyone. From natural language queries to automated insights generation, explore the democratization of business intelligence.",
                         pubDate: "2025-01-25T14:00:00",
                         thumbnail: "https://images.unsplash.com/photo-1526628953301-3e589a6a8b74?q=80&w=1000",
-                        source: "Coming Soon",
+                        source: "Ujas Patel",
                         guid: "nlp-bi-2025",
                         readTime: "5 min read",
                         category: "Business Intelligence"
@@ -526,7 +553,7 @@ const BlogPost = () => {
                         description: "The next generation of AI-powered customer service tools are here. Learn how intelligent agents are handling complex customer interactions and integrating with existing business processes.",
                         pubDate: "2025-01-20T10:30:00",
                         thumbnail: "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?q=80&w=1000",
-                        source: "Coming Soon",
+                        source: "Ujas Patel",
                         guid: "ai-customer-service-2025",
                         readTime: "6 min read",
                         category: "Customer Service"
@@ -613,13 +640,15 @@ const BlogPost = () => {
                             {post.description}
                         </div>
                         
-                        {/* Top Article Ad - High visibility */}
-                        <AdBanner 
-                            type="horizontal" 
-                            size="large" 
-                            adSlot="1234567890"
-                            className="article-top-ad"
-                        />
+                        {/* Show ads only on fully published articles (not Coming Soon) */}
+                        {post.source !== 'Coming Soon' && (
+                            <AdBanner 
+                                type="horizontal" 
+                                size="large" 
+                                adSlot="1234567890"
+                                className="article-top-ad"
+                            />
+                        )}
                         
                         <div className="post-body">
                             <LayoutComponent 
@@ -629,53 +658,20 @@ const BlogPost = () => {
                                 renderListItems={renderListItems}
                             />
                             
-                            {/* Mid-content Ad - Good engagement */}
-                            <InContentAd 
-                                adSlot="2345678901"
-                                className="mid-content-ad"
-                            />
+                            {/* Mid-content Ad - only for published articles */}
+                            {post.source !== 'Coming Soon' && (
+                                <InContentAd 
+                                    adSlot="2345678901"
+                                    className="mid-content-ad"
+                                />
+                            )}
                             
                             <div className="content-section">
                                 <h2>Expert Analysis</h2>
                                 <p>{post.content}</p>
                             </div>
                             
-                            {/* Affiliate recommendations based on article topic */}
-                            {post.guid === 'ai-copilots-2025' && (
-                                <AffiliateLink
-                                    href="https://github.com/features/copilot"
-                                    product="GitHub Copilot"
-                                    price="$10/month"
-                                    description="AI-powered code completion and suggestions directly in your IDE. Perfect for developers looking to boost productivity."
-                                    buttonText="Try GitHub Copilot"
-                                    imageUrl="https://github.githubassets.com/images/modules/site/copilot/copilot-logo.png"
-                                    className="recommended-tool"
-                                />
-                            )}
-                            
-                            {post.guid === 'ai-product-strategy-2025' && (
-                                <AffiliateLink
-                                    href="https://www.notion.so/product"
-                                    product="Notion AI"
-                                    price="$10/month"
-                                    description="AI-powered workspace that helps product managers organize strategies, write documentation, and analyze data."
-                                    buttonText="Try Notion AI"
-                                    imageUrl="https://www.notion.so/cdn-cgi/image/format=webp,width=640/https://images.ctfassets.net/spoqsaf9291f/6Lh8lMHOi5Ow7WOVJrxdNZ/4e5e6b7f8d1f2a3b4c5d6e7f8g9h0i1j/notion-ai-logo.png"
-                                    className="recommended-tool"
-                                />
-                            )}
-                            
-                            {post.guid === 'ai-project-management-2025' && (
-                                <AffiliateLink
-                                    href="https://monday.com/ai"
-                                    product="Monday.com AI"
-                                    price="From $8/month"
-                                    description="AI-powered project management platform that automates task creation, scheduling, and team collaboration."
-                                    buttonText="Try Monday.com AI"
-                                    imageUrl="https://dapulse-res.cloudinary.com/image/upload/f_auto,q_auto/remote_mondaycom_static/img/monday-logo-x2.png"
-                                    className="recommended-tool"
-                                />
-                            )}
+                            {/* Affiliate links removed to comply with request and avoid policy clashes */}
                             
                             <div className="post-footer">
                                 <div className="author-section">
@@ -705,13 +701,15 @@ const BlogPost = () => {
                                 </div>
                             </div>
                             
-                            {/* Bottom Ad - High conversion area */}
-                            <AdBanner 
-                                type="horizontal" 
-                                size="large" 
-                                adSlot="3456789012"
-                                className="article-bottom-ad"
-                            />
+                            {/* Bottom Ad - only for published articles */}
+                            {post.source !== 'Coming Soon' && (
+                                <AdBanner 
+                                    type="horizontal" 
+                                    size="large" 
+                                    adSlot="3456789012"
+                                    className="article-bottom-ad"
+                                />
+                            )}
                         </div>
                     </div>
                 </div>

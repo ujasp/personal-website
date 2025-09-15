@@ -96,7 +96,7 @@ const Articles = () => {
                     <p>Exploring the intersection of AI, technology, and business innovation</p>
                 </div>
                 
-                {/* Top of articles page ad */}
+                {/* Articles page ad (allowed: content-rich listing page) */}
                 <AdBanner 
                     type="horizontal" 
                     size="large" 

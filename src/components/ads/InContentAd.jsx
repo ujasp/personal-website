@@ -8,6 +8,10 @@ const InContentAd = ({
     style = {},
     responsive = true 
 }) => {
+    // Hide ads during local development to avoid empty placeholders
+    if (process.env.NODE_ENV !== 'production') {
+        return null;
+    }
     return (
         <div className={`in-content-ad ${className}`}>
             <div className="in-content-ad__wrapper">
@@ -22,7 +26,7 @@ const InContentAd = ({
                     }}
                     className="in-content-ad__content"
                 />
-                <div className="in-content-ad__label">Sponsored Content</div>
+                <div className="in-content-ad__label">Advertisement</div>
             </div>
         </div>
     );

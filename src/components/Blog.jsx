@@ -1,7 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { Link } from 'react-router-dom';
 import { FiArrowRight, FiChevronLeft, FiChevronRight } from 'react-icons/fi';
-import { AdBanner } from './ads';
 import './Blog.css';
 
 const Articles = () => {
@@ -242,13 +241,6 @@ const Articles = () => {
                     </Link>
                 </div>
                 
-                {/* Homepage blog section ad */}
-                <AdBanner 
-                    type="horizontal" 
-                    size="medium" 
-                    adSlot="5678901234"
-                    className="homepage-blog-ad"
-                />
             </div>
         </section>
     );
