@@ -2,7 +2,6 @@ import React, { useEffect, useState } from 'react';
 import { useParams, useNavigate, Link } from 'react-router-dom';
 import { FaLinkedin } from 'react-icons/fa';
 import Navbar from './Navbar';
-import { AdBanner, InContentAd } from './ads';
 import './BlogPost.css';
 
 const ARTICLES_DATA = {
@@ -624,14 +623,7 @@ const BlogPost = () => {
                         </div>
                         
                         {/* Show ads only on fully published articles */}
-                        {post && (
-                            <AdBanner 
-                                type="horizontal" 
-                                size="large" 
-                                adSlot="1234567890"
-                                className="article-top-ad"
-                            />
-                        )}
+                        
                         
                         <div className="post-body">
                             <LayoutComponent 
@@ -642,12 +634,7 @@ const BlogPost = () => {
                             />
                             
                             {/* Mid-content Ad - only for published articles */}
-                            {post && (
-                                <InContentAd 
-                                    adSlot="2345678901"
-                                    className="mid-content-ad"
-                                />
-                            )}
+                            
                             
                             <div className="content-section">
                                 <h2>Expert Analysis</h2>
@@ -685,14 +672,7 @@ const BlogPost = () => {
                             </div>
                             
                             {/* Bottom Ad - only for published articles */}
-                            {post && (
-                                <AdBanner 
-                                    type="horizontal" 
-                                    size="large" 
-                                    adSlot="3456789012"
-                                    className="article-bottom-ad"
-                                />
-                            )}
+                            
                         </div>
                     </div>
                 </div>

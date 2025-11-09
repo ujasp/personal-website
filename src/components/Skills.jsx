@@ -14,36 +14,36 @@ import '../App.css';
 const Skills = () => {
     const skillsData = [
         {
-            category: "Technical Skills",
+            category: "Product",
             skills: [
-                { icon: <FaPython />, name: 'Python' },
-                { icon: <FaDatabase />, name: 'SQL' },
-                { icon: <SiTableau />, name: 'Tableau' },
-                { icon: <SiJirasoftware />, name: 'JIRA' },
+                { icon: <FaProjectDiagram />, name: 'Roadmapping & Backlog' },
+                { icon: <FaTasks />, name: 'PRDs & User Stories' },
+                { icon: <GiCycle />, name: 'Continuous Discovery' }
+            ]
+        },
+        {
+            category: "AI Transformation",
+            skills: [
+                { icon: <FaChartBar />, name: 'Generative AI (agents, summarisation, retrieval)' },
+                { icon: <FaMagnifyingGlassChart />, name: 'Data Governance & Auditability' }
+            ]
+        },
+        {
+            category: "Strategy & Analytics",
+            skills: [
+                { icon: <FaChartBar />, name: 'KPI Design & Benefits Realisation' },
+                { icon: <FaDatabase />, name: 'BigQuery / SQL' },
+                { icon: <FaChartBar />, name: 'BI (GoodData, Power BI, Tableau)' },
+                { icon: <FaPython />, name: 'Python' }
+            ]
+        },
+        {
+            category: "Partnering & Delivery",
+            skills: [
+                { icon: <FaChartBar />, name: 'Finance Partnership (pricing, business casing)' },
+                { icon: <RiTeamFill />, name: 'Stakeholder Mgmt (Finance, Risk, Tech, Exec)' },
+                { icon: <SiJirasoftware />, name: 'Agile / Scrum (Jira / Confluence)' },
                 { icon: <PiMicrosoftExcelLogoFill />, name: 'Excel' }
-            ]
-        },
-        {
-            category: "Business & Analytical Acumen",
-            skills: [
-                { icon: <FaChartBar />, name: 'Financial Modeling' },
-                { icon: <FaMagnifyingGlassChart />, name: 'Market Research & Analysis' },
-                { icon: <GiCycle />, name: 'Process Improvement' }
-            ]
-        },
-        {
-            category: "Project Management & Methodologies",
-            skills: [
-                { icon: <FaProjectDiagram />, name: 'Product Management' },
-                { icon: <FaTasks />, name: 'Agile Development (Scrum)' },
-                { icon: <RiTeamFill />, name: 'Stakeholder Management' }
-            ]
-        },
-        {
-            category: "Leadership & Collaboration",
-            skills: [
-                { icon: <TbPresentationAnalyticsFilled />, name: 'Strategic Consulting' },
-                { icon: <BsFillRocketTakeoffFill />, name: 'Team Leadership' }
             ]
         }
     ];

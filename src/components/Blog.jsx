@@ -14,6 +14,18 @@ const Articles = () => {
     // Custom articles data - only featured ones
     const customArticles = [
         {
+            title: "GitHub leads the enterprise, Claude leads the pack: Cursor’s speed can’t close",
+            description: "A breakdown of how GitHub, Anthropic’s Claude and Cursor stack up for teams — where each wins today and what actually matters for enterprise AI adoption.",
+            pubDate: "2025-10-01T09:00:00",
+            link: "https://venturebeat.com/ai/github-leads-the-enterprise-claude-leads-the-pack-cursors-speed-cant-close",
+            thumbnail: "https://images.ctfassets.net/jdtwqhzvc2n1/4mpxx2sCfzGbAB2SBsTwsF/5f197f7ba05d8ab2768240394e1f7c18/Main_Chart_for_Story_Take_5.svg?w=1000&q=100",
+            source: "VentureBeat",
+            category: "AI",
+            guid: "venturebeat-github-claude-cursor-2025-10-01",
+            readTime: "6 min read",
+            featured: true
+        },
+        {
             title: "Chinese startup Manus challenges ChatGPT in data visualization: Which should enterprises use?",
             description: "A deep dive into how Chinese startup Manus is taking on OpenAI's ChatGPT in the data visualization space, examining the competitive landscape and what enterprises should consider when choosing between these AI-powered solutions.",
             pubDate: "2025-07-22T10:00:00",
@@ -42,7 +54,7 @@ const Articles = () => {
             description: "In the evolving landscape of AI, enterprises face the challenge of integrating modern solutions with legacy systems that often lack the necessary application programming interfaces (APIs) for seamless integration.",
             pubDate: "2025-01-30T09:15:00",
             link: "https://venturebeat.com/ai/pig-api-give-your-ai-agents-a-virtual-desktop-to-automate-windows-apps/",
-            thumbnail: "https://venturebeat.com/wp-content/uploads/2025/01/a-vector-illustration-of-a-sophisticated_dE40ZnYlTlqEs85jX3HojA_RfAN0as0StqbwUix2n7DgA-transformed.jpeg?w=750",
+            thumbnail: "https://venturebeat.com/_next/image?url=https%3A%2F%2Fimages.ctfassets.net%2Fjdtwqhzvc2n1%2F66XppCUYO2lVfuGcUzDXJi%2Ff73a4bd47870071ce8980784446888bb%2Fa-vector-illustration-of-a-sophisticated_dE40ZnYlTlqEs85jX3HojA_RfAN0as0StqbwUix2n7DgA-transformed.jpeg%3Fw%3D1000%26q%3D100&w=1920&q=75",
             source: "VentureBeat",
             category: "AI Integration",
             guid: "venturebeat-pig-api-2025",
@@ -87,7 +99,9 @@ const Articles = () => {
     useEffect(() => {
         const fetchPosts = async () => {
             try {
-                setPosts(customArticles);
+                // Only show external articles on the homepage carousel
+                const externalOnly = customArticles.filter(a => a.link && a.link.startsWith('http'));
+                setPosts(externalOnly);
                 setLoading(false);
             } catch (err) {
                 setError('Failed to fetch articles');

@@ -2,7 +2,6 @@ import React, { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { FiArrowRight } from 'react-icons/fi';
 import Navbar from '../components/Navbar';
-import { AdBanner } from '../components/ads';
 import './Articles.css';
 
 const Articles = () => {
@@ -11,7 +10,19 @@ const Articles = () => {
     }, []);
 
     // Using the same article data as in BlogPost component
+    // Only show external articles
     const articles = [
+        {
+            title: "GitHub leads the enterprise, Claude leads the pack: Cursor’s speed can’t close",
+            description: "Comparing GitHub, Anthropic Claude and Cursor for real-world enterprise workflows — who wins, why, and how to choose pragmatically.",
+            pubDate: "2025-10-01T09:00:00",
+            thumbnail: "https://images.ctfassets.net/jdtwqhzvc2n1/4mpxx2sCfzGbAB2SBsTwsF/5f197f7ba05d8ab2768240394e1f7c18/Main_Chart_for_Story_Take_5.svg?w=1000&q=100",
+            source: "VentureBeat",
+            guid: "venturebeat-github-claude-cursor-2025-10-01",
+            readTime: "6 min read",
+            category: "AI",
+            link: "https://venturebeat.com/ai/github-leads-the-enterprise-claude-leads-the-pack-cursors-speed-cant-close"
+        },
         {
             title: "Chinese startup Manus challenges ChatGPT in data visualization: Which should enterprises use?",
             description: "A deep dive into how Chinese startup Manus is taking on OpenAI's ChatGPT in the data visualization space, examining the competitive landscape and what enterprises should consider when choosing between these AI-powered solutions.",
@@ -38,52 +49,12 @@ const Articles = () => {
             title: "Pig API: Give your AI agents a virtual desktop to automate Windows apps",
             description: "In the evolving landscape of AI, enterprises face the challenge of integrating modern solutions with legacy systems that often lack the necessary application programming interfaces (APIs) for seamless integration.",
             pubDate: "2025-01-30T09:15:00",
-            thumbnail: "https://venturebeat.com/wp-content/uploads/2025/01/a-vector-illustration-of-a-sophisticated_dE40ZnYlTlqEs85jX3HojA_RfAN0as0StqbwUix2n7DgA-transformed.jpeg?w=750",
+            thumbnail: "https://venturebeat.com/_next/image?url=https%3A%2F%2Fimages.ctfassets.net%2Fjdtwqhzvc2n1%2F66XppCUYO2lVfuGcUzDXJi%2Ff73a4bd47870071ce8980784446888bb%2Fa-vector-illustration-of-a-sophisticated_dE40ZnYlTlqEs85jX3HojA_RfAN0as0StqbwUix2n7DgA-transformed.jpeg%3Fw%3D1000%26q%3D100&w=1920&q=75",
             source: "VentureBeat",
             guid: "venturebeat-pig-api-2025",
             readTime: "5 min read",
             category: "AI Integration",
             link: "https://venturebeat.com/ai/pig-api-give-your-ai-agents-a-virtual-desktop-to-automate-windows-apps/"
-        },
-        {
-            title: "How AI is Revolutionizing Product Strategy and Management Consulting",
-            description: "Artificial Intelligence is transforming the landscape of product management and strategy consulting. From predictive analytics for product-market fit to AI-powered decision support systems, discover how modern tools are enabling data-driven product strategies and revolutionizing traditional consulting approaches.",
-            pubDate: "2025-02-15T10:00:00",
-            thumbnail: "https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1000",
-            source: "Ujas Patel",
-            guid: "ai-product-strategy-2025",
-            readTime: "8 min read",
-            category: "Product Strategy"
-        },
-        {
-            title: "The Rise of AI Copilots: Transforming Developer Productivity",
-            description: "Explore how AI-powered coding assistants are revolutionizing software development. From code completion to natural language programming, learn how these tools are boosting developer productivity and changing the way we write code.",
-            pubDate: "2025-02-10T09:00:00",
-            thumbnail: "https://images.unsplash.com/photo-1555949963-aa79dcee981c?q=80&w=1000",
-            source: "Ujas Patel",
-            guid: "ai-copilots-2025",
-            readTime: "6 min read",
-            category: "Development"
-        },
-        {
-            title: "AI-Powered Project Management: The Future of Team Collaboration",
-            description: "Discover how artificial intelligence is transforming project management tools, from automated task prioritization to intelligent resource allocation and predictive analytics for project success.",
-            pubDate: "2025-02-05T11:00:00",
-            thumbnail: "https://images.unsplash.com/photo-1552664730-d307ca884978?q=80&w=1000",
-            source: "Ujas Patel",
-            guid: "ai-project-management-2025",
-            readTime: "7 min read",
-            category: "Project Management"
-        },
-        {
-            title: "Natural Language Processing in Business Intelligence",
-            description: "How conversational AI and NLP are making data analytics accessible to everyone. From natural language queries to automated insights generation, explore the democratization of business intelligence.",
-            pubDate: "2025-01-25T14:00:00",
-            thumbnail: "https://images.unsplash.com/photo-1526628953301-3e589a6a8b74?q=80&w=1000",
-            source: "Ujas Patel",
-            guid: "nlp-bi-2025",
-            readTime: "5 min read",
-            category: "Business Intelligence"
         }
     ];
 
@@ -95,14 +66,6 @@ const Articles = () => {
                     <h1>Articles</h1>
                     <p>Exploring the intersection of AI, technology, and business innovation</p>
                 </div>
-                
-                {/* Articles page ad (allowed: content-rich listing page) */}
-                <AdBanner 
-                    type="horizontal" 
-                    size="large" 
-                    adSlot="4567890123"
-                    className="articles-page-top-ad"
-                />
                 
                 <div className="articles-grid">
                     {articles.map((article) => (

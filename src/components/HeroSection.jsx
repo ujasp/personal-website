@@ -54,9 +54,9 @@ const HeroSection = () => {
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.8, delay: 0.6 }}
                     >
-                        <p className="hero-tagline">Strategy Consultant</p>
-                        <p className="hero-tagline">Data Analyst</p>
-                        <p className="hero-tagline">Relationship Builder</p>
+                        <p className="hero-tagline">Product</p>
+                        <p className="hero-tagline">AI Transformation</p>
+                        <p className="hero-tagline">Strategy</p>
                     </motion.div>
                     
                     <motion.div 

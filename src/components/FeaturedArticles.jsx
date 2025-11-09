@@ -62,7 +62,9 @@ const FeaturedArticles = () => {
     useEffect(() => {
         const fetchPosts = async () => {
             try {
-                setPosts(customArticles);
+                // Only keep external articles here too
+                const externalOnly = customArticles.filter(a => a.link && a.link.startsWith('http'));
+                setPosts(externalOnly);
                 setLoading(false);
             } catch (err) {
                 setError('Failed to fetch articles');

@@ -11,7 +11,6 @@ import ArticlesPage from './pages/Articles';
 import PrivacyPolicy from './pages/PrivacyPolicy';
 import Footer from './components/Footer';
 import SectionNavigator from './components/SectionNavigator';
-import CookieConsent from './components/CookieConsent';
 import './App.css';
 
 const HomePage = () => (
@@ -36,7 +35,6 @@ const App = () => {
                 <Route path="/privacy-policy" element={<PrivacyPolicy />} />
                 <Route path="/" element={<HomePage />} />
             </Routes>
-            <CookieConsent />
         </Router>
     );
 };
