@@ -13,6 +13,17 @@ const Articles = () => {
     // Only show external articles
     const articles = [
         {
+            title: "Headless vs. native semantic layer: The architectural key to unlocking 90%+ text",
+            description: "A look at when to deploy headless versus native semantic layers and how those architectural choices unlock broader data activation for AI products.",
+            pubDate: "2025-12-02T08:45:00",
+            thumbnail: "https://venturebeat.com/_next/image?url=https%3A%2F%2Fimages.ctfassets.net%2Fjdtwqhzvc2n1%2F38T0GwbOYoyOTaUAom6N1j%2F5c14ff7db16466dba5c69455f7f04f56%2FInfrastructure.png%3Fw%3D1000%26q%3D100&w=3840&q=85",
+            source: "VentureBeat",
+            guid: "venturebeat-semantic-layer-2025",
+            readTime: "5 min read",
+            category: "Data Infrastructure",
+            link: "https://venturebeat.com/ai/headless-vs-native-semantic-layer-the-architectural-key-to-unlocking-90-text"
+        },
+        {
             title: "GitHub leads the enterprise, Claude leads the pack: Cursor’s speed can’t close",
             description: "Comparing GitHub, Anthropic Claude and Cursor for real-world enterprise workflows — who wins, why, and how to choose pragmatically.",
             pubDate: "2025-10-01T09:00:00",

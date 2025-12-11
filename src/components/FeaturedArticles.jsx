@@ -14,6 +14,18 @@ const FeaturedArticles = () => {
     // Custom articles data - only featured ones
     const customArticles = [
         {
+            title: "Headless vs. native semantic layer: The architectural key to unlocking 90%+ text",
+            description: "Breaking down whether enterprises should adopt headless or native semantic layers, and how the right architecture drives higher data activation across AI products.",
+            pubDate: "2025-12-02T08:45:00",
+            link: "https://venturebeat.com/ai/headless-vs-native-semantic-layer-the-architectural-key-to-unlocking-90-text",
+            thumbnail: "https://venturebeat.com/_next/image?url=https%3A%2F%2Fimages.ctfassets.net%2Fjdtwqhzvc2n1%2F38T0GwbOYoyOTaUAom6N1j%2F5c14ff7db16466dba5c69455f7f04f56%2FInfrastructure.png%3Fw%3D1000%26q%3D100&w=3840&q=85",
+            source: "VentureBeat",
+            category: "Data Infrastructure",
+            guid: "venturebeat-semantic-layer-2025",
+            readTime: "5 min read",
+            featured: true
+        },
+        {
             title: "Pig API: Give your AI agents a virtual desktop to automate Windows apps",
             description: "In the evolving landscape of AI, enterprises face the challenge of integrating modern solutions with legacy systems that often lack the necessary application programming interfaces (APIs) for seamless integration.",
             pubDate: "2025-01-29T16:34:00",
